@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Platform;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -51,6 +52,7 @@ public class Controller {
     }
     private void rendez(){
         lblSzam.setText("");
+        listSzamok.setItems(listSzamok.getItems().sorted());
 
     }
 }
