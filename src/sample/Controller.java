@@ -62,6 +62,7 @@ public class Controller {
         btnSorsol.setText("Sorsol");
         btnSorsol.setOnAction(e->sorsol());
         reset=true;
+        sorsolasok=0;
 
     }
 }
