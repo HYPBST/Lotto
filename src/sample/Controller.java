@@ -51,8 +51,11 @@ public class Controller {
 
     }
     private void rendez(){
+
         lblSzam.setText("");
         listSzamok.setItems(listSzamok.getItems().sorted());
+        btnSorsol.setText("Sorsol");
+        btnSorsol.setOnAction(e->sorsol());
 
     }
 }
