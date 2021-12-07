@@ -24,10 +24,15 @@ public class Controller {
     @FXML
     private ListView<Integer> listSzamok;
     private int sorsolasok=0;
+    private boolean reset=true;
     @FXML
     public void sorsol() throws InterruptedException {
         Timer timer=new Timer();
         final Integer[] szamlal = {0};
+        if(reset){
+            listSzamok.getItems().clear();
+            reset=false;
+        }
         if(sorsolasok<5){
             TimerTask timerTask = new TimerTask() {
                 @Override
@@ -56,6 +61,7 @@ public class Controller {
         listSzamok.setItems(listSzamok.getItems().sorted());
         btnSorsol.setText("Sorsol");
         btnSorsol.setOnAction(e->sorsol());
+        reset=true;
 
     }
 }
